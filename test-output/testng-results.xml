@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="4" total="5" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="My Grandiouse Test Suite" duration-ms="95" started-at="2019-09-24T00:50:02Z" finished-at="2019-09-24T00:50:02Z">
+    <groups>
+    </groups>
+    <test name="My First Test" duration-ms="8" started-at="2019-09-24T00:50:02Z" finished-at="2019-09-24T00:50:02Z">
+    </test> <!-- My First Test -->
+    <test name="My Another Test" duration-ms="35" started-at="2019-09-24T00:50:02Z" finished-at="2019-09-24T00:50:02Z">
+      <class name="simple_demo.AnotherDemo">
+        <test-method status="PASS" signature="zzz()[pri:0, instance:simple_demo.AnotherDemo@7921b0a2]" name="zzz" duration-ms="10" started-at="2019-09-23T20:50:02Z" finished-at="2019-09-23T20:50:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- zzz -->
+      </class> <!-- simple_demo.AnotherDemo -->
+    </test> <!-- My Another Test -->
+  </suite> <!-- My Grandiouse Test Suite -->
+</testng-results>
