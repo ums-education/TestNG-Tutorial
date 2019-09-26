@@ -3,14 +3,19 @@
 
 <suite name="My Grandiouse Test Suite">
 
-	<test name="My First Test">
+	
+	<test name="testing">
+		<parameter name="browser" value="firefox"/>
+		<parameter name="username" value="Tester"/>
+		<parameter name="password" value="test"/>
+		
+		<packages>
+			<package name="advanced_annotations" />
+		</packages>
+	</test>
 
-		<groups>
-			<run>
-				<include name="Negative Scenario" />
-			</run>
-		</groups>
 
+<!-- <test name="My First Test" enabled=false>
 		<classes>
 			<class name="simple_demo.SimpleTestNGDemo">
 				<methods>
@@ -22,11 +27,11 @@
 		</classes>
 	</test>
 
-	<test name="My Another Test">
+	<test name="My Another Test" enabled=false>
 		<classes>
 			<class name="simple_demo.AnotherDemo" />
 		</classes>
 	</test>
-
+-->
 
 </suite> 

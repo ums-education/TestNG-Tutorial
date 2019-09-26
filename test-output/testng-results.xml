@@ -1,19 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="4" total="5" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="My Grandiouse Test Suite" duration-ms="95" started-at="2019-09-24T00:50:02Z" finished-at="2019-09-24T00:50:02Z">
+  <suite name="My Grandiouse Test Suite" duration-ms="17831" started-at="2019-09-26T00:49:28Z" finished-at="2019-09-26T00:49:45Z">
     <groups>
     </groups>
-    <test name="My First Test" duration-ms="8" started-at="2019-09-24T00:50:02Z" finished-at="2019-09-24T00:50:02Z">
-    </test> <!-- My First Test -->
-    <test name="My Another Test" duration-ms="35" started-at="2019-09-24T00:50:02Z" finished-at="2019-09-24T00:50:02Z">
-      <class name="simple_demo.AnotherDemo">
-        <test-method status="PASS" signature="zzz()[pri:0, instance:simple_demo.AnotherDemo@7921b0a2]" name="zzz" duration-ms="10" started-at="2019-09-23T20:50:02Z" finished-at="2019-09-23T20:50:02Z">
+    <test name="testing" duration-ms="17831" started-at="2019-09-26T00:49:28Z" finished-at="2019-09-26T00:49:45Z">
+      <class name="advanced_annotations.Setup">
+        <test-method status="PASS" signature="settingUpDriver(java.lang.String)[pri:0, instance:advanced_annotations.Setup@39aeed2f]" name="settingUpDriver" is-config="true" duration-ms="7962" started-at="2019-09-25T20:49:28Z" finished-at="2019-09-25T20:49:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- zzz -->
-      </class> <!-- simple_demo.AnotherDemo -->
-    </test> <!-- My Another Test -->
+        </test-method> <!-- settingUpDriver -->
+        <test-method status="PASS" signature="destroyDriver()[pri:0, instance:advanced_annotations.Setup@39aeed2f]" name="destroyDriver" is-config="true" duration-ms="2895" started-at="2019-09-25T20:49:43Z" finished-at="2019-09-25T20:49:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- destroyDriver -->
+      </class> <!-- advanced_annotations.Setup -->
+      <class name="advanced_annotations.LoginTests">
+        <test-method status="PASS" signature="beforeLogin()[pri:0, instance:advanced_annotations.LoginTests@724af044]" name="beforeLogin" is-config="true" duration-ms="0" started-at="2019-09-25T20:49:36Z" finished-at="2019-09-25T20:49:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeLogin -->
+        <test-method status="PASS" signature="anotherTest()[pri:0, instance:advanced_annotations.LoginTests@724af044]" name="anotherTest" duration-ms="7" started-at="2019-09-25T20:49:36Z" finished-at="2019-09-25T20:49:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- anotherTest -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:advanced_annotations.LoginTests@724af044]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-09-25T20:49:36Z" finished-at="2019-09-25T20:49:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="holdOn()[pri:0, instance:advanced_annotations.LoginTests@724af044]" name="holdOn" is-config="true" duration-ms="3001" started-at="2019-09-25T20:49:36Z" finished-at="2019-09-25T20:49:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- holdOn -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:advanced_annotations.LoginTests@724af044]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-09-25T20:49:39Z" finished-at="2019-09-25T20:49:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String)[pri:0, instance:advanced_annotations.LoginTests@724af044]" name="login" duration-ms="931" started-at="2019-09-25T20:49:39Z" finished-at="2019-09-25T20:49:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Tester]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[test]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="holdOn()[pri:0, instance:advanced_annotations.LoginTests@724af044]" name="holdOn" is-config="true" duration-ms="3000" started-at="2019-09-25T20:49:40Z" finished-at="2019-09-25T20:49:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- holdOn -->
+        <test-method status="PASS" signature="afterLogin()[pri:0, instance:advanced_annotations.LoginTests@724af044]" name="afterLogin" is-config="true" duration-ms="0" started-at="2019-09-25T20:49:43Z" finished-at="2019-09-25T20:49:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterLogin -->
+      </class> <!-- advanced_annotations.LoginTests -->
+    </test> <!-- testing -->
   </suite> <!-- My Grandiouse Test Suite -->
 </testng-results>

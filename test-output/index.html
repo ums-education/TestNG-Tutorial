@@ -54,7 +54,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-My_Grandiouse_Test_Suite">
-                    <span class="test-stats">2 tests</span>
+                    <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,7 +102,12 @@
                     <div class="method-list-content passed suite-My_Grandiouse_Test_Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-My_Grandiouse_Test_Suite" title="simple_demo.AnotherDemo" hash-for-method="zzz">zzz</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-My_Grandiouse_Test_Suite" title="advanced_annotations.LoginTests" hash-for-method="anotherTest">anotherTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-My_Grandiouse_Test_Suite" title="advanced_annotations.LoginTests" hash-for-method="login(Tester, test)">login(Tester, test)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-My_Grandiouse_Test_Suite -->
@@ -120,14 +125,22 @@
           <div class="suite-My_Grandiouse_Test_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">simple_demo.AnotherDemo</span>
+              <span class="class-name">advanced_annotations.LoginTests</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="zzz">
-                  </a> <!-- zzz -->
-                  <span class="method-name">zzz</span>
+                  <a name="anotherTest">
+                  </a> <!-- anotherTest -->
+                  <span class="method-name">anotherTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="login(Tester, test)">
+                  </a> <!-- login(Tester, test) -->
+                  <span class="method-name">login</span>
+                  <span class="parameters">(Tester, test)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -142,27 +155,18 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;My Grandiouse Test Suite&quot;&gt;
-  &lt;test name=&quot;My First Test&quot;&gt;
-    &lt;groups&gt;
-      &lt;run&gt;
-        &lt;include name=&quot;Negative Scenario&quot;/&gt;
-      &lt;/run&gt;
-    &lt;/groups&gt;
+  &lt;test name=&quot;testing&quot;&gt;
+    &lt;parameter name=&quot;password&quot; value=&quot;test&quot;/&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;firefox&quot;/&gt;
+    &lt;parameter name=&quot;username&quot; value=&quot;Tester&quot;/&gt;
+    &lt;packages&gt;
+      &lt;package name=&quot;advanced_annotations&quot;/&gt;
+    &lt;/packages&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;simple_demo.SimpleTestNGDemo&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;bye&quot;/&gt;
-          &lt;exclude name=&quot;excited&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- simple_demo.SimpleTestNGDemo --&gt;
-      &lt;class name=&quot;simple_demo.AnotherDemo&quot;/&gt;
+      &lt;class name=&quot;advanced_annotations.LoginTests&quot;/&gt;
+      &lt;class name=&quot;advanced_annotations.Setup&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- My First Test --&gt;
-  &lt;test name=&quot;My Another Test&quot;&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;simple_demo.AnotherDemo&quot;/&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- My Another Test --&gt;
+  &lt;/test&gt; &lt;!-- testing --&gt;
 &lt;/suite&gt; &lt;!-- My Grandiouse Test Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -174,10 +178,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">My First Test (2 classes)</span>
-              </li>
-              <li>
-                <span class="test-name">My Another Test (1 class)</span>
+                <span class="test-name">testing (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -203,16 +204,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'zzz')
-data.setCell(0, 2, 'simple_demo.AnotherDemo')
-data.setCell(0, 3, 10);
+data.setCell(0, 1, 'login')
+data.setCell(0, 2, 'advanced_annotations.LoginTests')
+data.setCell(0, 3, 931);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'anotherTest')
+data.setCell(1, 2, 'advanced_annotations.LoginTests')
+data.setCell(1, 3, 7);
 window.suiteTableData['My_Grandiouse_Test_Suite']= { tableData: data, tableDiv: 'times-div-My_Grandiouse_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 10 ms</span>
+              <span class="suite-total-time">Total running time: 938 ms</span>
               <div id="times-div-My_Grandiouse_Test_Suite">
               </div> <!-- times-div-My_Grandiouse_Test_Suite -->
             </div> <!-- times-div -->
@@ -227,27 +232,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-My_Grandiouse_Test_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">4 ignored methods</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">simple_demo.AnotherDemo</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">zzz</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">simple_demo.SimpleTestNGDemo</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">bye</span>
-                <br/>
-                <span class="ignored-method-name">hello</span>
-                <br/>
-                <span class="ignored-method-name">excited</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-My_Grandiouse_Test_Suite" class="panel">
@@ -256,11 +243,53 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">simple_demo.AnotherDemo</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">zzz</span>
+              <div class="chronological-class-name">advanced_annotations.Setup</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">settingUpDriver(firefox)</span>
                 <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">advanced_annotations.LoginTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">beforeLogin</span>
+                <span class="method-start">7967 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">anotherTest</span>
+                <span class="method-start">7988 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">7988 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">holdOn</span>
+                <span class="method-start">7996 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">10998 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">login(Tester, test)</span>
+                <span class="method-start">10998 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">holdOn</span>
+                <span class="method-start">11931 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">afterLogin</span>
+                <span class="method-start">14931 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">advanced_annotations.Setup</div> <!-- chronological-class-name -->
+              <div class="configuration-test after">
+                <span class="method-name">destroyDriver</span>
+                <span class="method-start">14932 ms</span>
+              </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

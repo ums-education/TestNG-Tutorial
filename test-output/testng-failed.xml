@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [My Grandiouse Test Suite]">
+  <test name="testing(failed)">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="advanced_annotations.LoginTests">
+        <methods>
+          <include name="login"/>
+        </methods>
+      </class> <!-- advanced_annotations.LoginTests -->
+      <class name="advanced_annotations.Setup">
+        <methods>
+          <include name="settingUpDriver"/>
+        </methods>
+      </class> <!-- advanced_annotations.Setup -->
+    </classes>
+  </test> <!-- testing(failed) -->
+</suite> <!-- Failed suite [My Grandiouse Test Suite] -->
