@@ -30,7 +30,7 @@ public class LoginTests {
 		System.out.println("BeforeMethod inside LoginTests");
 	}
 	
-	@Test
+	@Test ()
 	@Parameters({"username", "password"})
 	public void login(String username, String password) {
 		Setup.driver.get("http://secure.smartbearsoftware.com/samples/TestComplete12/WebOrders/Login.aspx");
